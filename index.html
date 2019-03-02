@@ -13,6 +13,10 @@
   <!-- Scripts -->
   <script src="js/master.js" charset="utf-8"></script>
   <script src="js/menu.js" charset="utf-8"></script>
+  <script src="js/text.js" charset="utf-8"></script>
+  <script src="js/data.js" charset="utf-8"></script>
+  <script src="js/game.js" charset="utf-8"></script>
+  <script src="js/event.js" charset="utf-8"></script>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/master.css">
@@ -39,13 +43,17 @@
           <span id="menu_start_custom">Custom</span>
 
           <br>
-          <a>Start new life</a>
+          <a onclick="startGame();">Start new life</a>
         </span>
+
+        <span id="game"></span>
 
       </div>
     </div>
     <div class="col-sm-6">.col-sm-4</div>
   </div>
+
+  <a onclick="startGame()">Debug</a>
 
 <script type="text/javascript">init();</script>
 </body>
