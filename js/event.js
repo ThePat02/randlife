@@ -16,7 +16,7 @@ function eventChildhood()
 function debugEvent(folder, id)
 {
   $.ajax({
-           type: "POST", //rest Type
+           type: "GET", //rest Type
            dataType: 'json', //mispelled
            url: "https://thepat02.github.io/randlife//data/event/" + folder + "/" + id + ".json",
            async: false,
