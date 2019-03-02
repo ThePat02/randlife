@@ -18,7 +18,7 @@ function debugEvent(folder, id)
   $.ajax({
            type: "POST", //rest Type
            dataType: 'json', //mispelled
-           url: "https://raw.githack.com/ThePat02/randlife/master/data/event/" + folder + "/" + id + ".json",
+           url: "https://thepat02.github.io/randlife//data/event/" + folder + "/" + id + ".json",
            async: false,
            contentType: "application/json; charset=utf-8",
            success: function (msg) {
