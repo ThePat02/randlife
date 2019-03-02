@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>RandLife</title>
+
+  <!-- CDNs & stuff I need -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="js/master.js" charset="utf-8"></script>
+  <script src="js/menu.js" charset="utf-8"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/shame.css">
+
+</head>
+
+<body>
+
+  <h1>RandLife <small>v0.1</small></h1>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div id="gamebox">
+
+        <span id="menu_init">
+          <strong>Welcome to your random new life: </strong>
+          <a onclick="initNewGame('random')">Random</a> or <a onclick="initNewGame('custom')">Custom</a><br>
+        </span>
+        <span id="menu_start">
+          Name: <input type="text" name="" value=""> Surname: <input type="text" name="" value=""><br>
+
+          <span id="menu_start_random">Random</span>
+          <span id="menu_start_custom">Custom</span>
+
+          <br>
+          <a>Start new life</a>
+        </span>
+
+      </div>
+    </div>
+    <div class="col-sm-6">.col-sm-4</div>
+  </div>
+
+<script type="text/javascript">init();</script>
+</body>
+
+</html>
