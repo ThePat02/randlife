@@ -84,7 +84,12 @@ function chooseSchool(school_arg) {
     m_popularity = m_popularity + 5;
   }
 
+  lineBreak();
+  write("You can join clubs etc. by selecting them on the school dashboard.", "hint");
+  menuToggle(true, "dashboard_school");
+
   updateStatGraph();
+  lineBreak();
   menuToggle(true, "button_nextyear");
 }
 

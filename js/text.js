@@ -6,6 +6,8 @@ function write(text, style)
       case "bold":
         document.getElementById('game').innerHTML += "<strong>" + text +"</strong>";
         break;
+      case "hint":
+        document.getElementById('game').innerHTML += "<span style='color:grey'>" + text +"</span>";
       default:
         document.getElementById('game').innerHTML += text;
         break;

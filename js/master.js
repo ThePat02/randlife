@@ -4,6 +4,7 @@ function init()
 {
   menuToggle(false, "menu_start");
   menuToggle(false, "button_nextyear");
+  menuToggle(false, "dashboard_school");
 
   //Load resources
   jsonGetSchools();
