@@ -25,13 +25,13 @@ function checkSpecialEvent() {
 
 
 
-function chooseSchool(school) {
+function chooseSchool(school_arg) {
   menuToggle(false, "menu_school");
   lineBreak();
 
 var req2 = school.req[2];
 
-  if (school == 2) {
+  if (school_arg == 2) {
     if (req2 == m_parentalwealth) {
       m_school = 2;
       write("You decide to go to a " + school.name[2] + ".");
@@ -39,7 +39,7 @@ var req2 = school.req[2];
       m_school = 0;
       write("You can't afford this school so you go to a " + school.name[0] + ".");
     }
-  } else if (school == 1) {
+  } else if (school_arg == 1) {
     if (school.req[1] == m_parentalwealth) {
       m_school = 1;
       write("You decide to go to a " + school.name[1] + ".");

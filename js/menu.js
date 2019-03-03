@@ -31,7 +31,9 @@ function showStartMenu(mode) {
 
 function showChooseSchoolMenu()
 {
-  write("<span id='menu_school'>Choose your school: ");
-  write("<a onclick='chooseSchool(0)'>" + school.name[0] + "</a> | " + "<a onclick='chooseSchool(1)'>" + school.name[1] + "</a> | " + "<a onclick='chooseSchool(2)'>" + school.name[2] + "</a></span>");
+  write("<span id='menu_school'>")
+  write("Choose your school: ");
+  write("<a onclick='chooseSchool(0)'>" + school.name[0] + "</a> | " + "<a onclick='chooseSchool(1)'>" + school.name[1] + "</a> | " + "<a onclick='chooseSchool(2)'>" + school.name[2] + "</a>");
+  write("</span>")
   lineBreak();
 }
