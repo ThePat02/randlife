@@ -32,7 +32,7 @@ function randomizeStats(a)
 {
   m_health = 100;
   m_popularity = 0;
-  m_appearance = generateRandom(30, 100);
+  m_appearance = generateRandom(20, 100);
   m_intellect = generateRandom(20, 100);
   m_fitness = generateRandom(40, 100);
 

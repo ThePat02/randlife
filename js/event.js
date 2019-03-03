@@ -66,6 +66,7 @@ function chooseSchool(school_arg) {
     case (m_appearance > 80):
       write("Since you are the best looking in class, you are rather popular.");
       m_popularity = m_popularity + 25;
+      break;
     case (m_appearance > 70):
       write("You are rather good looking and people want to talk with you.");
       m_popularity = m_popularity + 10;
@@ -78,11 +79,12 @@ function chooseSchool(school_arg) {
       break;
   }
 
-  if (m_parentalwealth == 2) {
+  if (m_parentalwealth == 3) {
     write("Your parents wealth benefits your popularity!");
     m_popularity = m_popularity + 5;
   }
 
+  updateStatGraph();
   menuToggle(true, "button_nextyear");
 }
 

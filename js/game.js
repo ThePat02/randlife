@@ -17,7 +17,7 @@ function nextYear()
   }
 
   updateScroll();
-
+  updateStatGraph();
 
   console.log("Finished year");
 }
