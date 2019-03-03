@@ -88,6 +88,10 @@ function calcGrades() {
       break;
   }
 
+  return result;
+}
+
+
 function studentCouncil() {
   if (m_intellect + m_popularity > 99) {
     write("You are elected to join the student council.");
@@ -135,8 +139,7 @@ function updateClubStats() {
   }
 }
 
-function joinAct(act)
-{
+function joinAct(act) {
   switch (act) {
     case "none":
       write("You aren't doing anything after school.");

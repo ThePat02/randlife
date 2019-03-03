@@ -33,8 +33,6 @@ function checkSpecialEvent() {
 
 
 
-  return result;
-}
 
 
 
