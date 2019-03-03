@@ -1,15 +1,12 @@
 // Masterfile
 
-//Load resources
-jsonGetSchools();
-
-
 function init()
 {
   menuToggle(false, "menu_start");
   menuToggle(false, "button_nextyear");
 
-
+  //Load resources
+  jsonGetSchools();
 }
 
 function initNewGame(mode)
