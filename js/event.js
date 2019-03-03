@@ -1,16 +1,29 @@
 function triggerEvent() {
 
-  switch (m_age) {
-    case (val <= 6):
-      eventChildhood();
-      break;
-    default:
+  var random = Math.floor(Math.random() * 10) + 0;
+
+  if (random == 5) {
+    //triggerEvent
   }
+
 }
 
 function eventChildhood()
 {
 
+}
+
+function checkSpecialEvent()
+{
+  if (1 == 2)
+  {
+
+  } //Placeholder
+  else if (m_age == 6) {
+    write("You are now old enough to start going to school.");
+    lineBreak();
+    showChooseSchoolMenu();
+  }
 }
 
 function debugEvent(folder, id)

@@ -1,0 +1,12 @@
+{
+  "name": [
+    "Public school",
+    "Private school",
+    "High class private school"
+  ],
+  "req": [
+    0,
+    2,
+    3
+  ]
+}

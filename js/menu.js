@@ -27,3 +27,11 @@ function showStartMenu(mode) {
       break;
   }
 }
+
+function showChooseSchoolMenu()
+{
+  write("Choose your school: ");
+  jsonGetSchools()
+  write("<a>" + school.name[0] + "</a> " + "<a>" + school.name[1] + "</a> " + "<a>" + school.name[2] + "</a>");
+  lineBreak();
+}
