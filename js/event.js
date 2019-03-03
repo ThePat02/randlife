@@ -105,7 +105,7 @@ function calcGrades() {
     case (grade < 80):
       result = "Average";
       break;
-    case (grade > 90):
+    case (grade < 90):
       result = "Good";
       break;
     case (grade > 90):
