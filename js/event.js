@@ -27,8 +27,10 @@ function chooseSchool(school) {
   menuToggle(false, "menu_school");
   lineBreak();
 
+  var req2 = school.req[2];
+
   if (school == 2) {
-    if (school.req[2] == m_parentalwealth) {
+    if (req2 == m_parentalwealth) {
       m_school = 2;
       write("You decide to go to a " + school.name[2] + ".");
     } else {
