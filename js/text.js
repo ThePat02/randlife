@@ -7,7 +7,8 @@ function write(text, style)
         document.getElementById('game').innerHTML += "<strong>" + text +"</strong>";
         break;
       case "hint":
-        document.getElementById('game').innerHTML += "<span style='color:grey'>" + text +"</span>";
+        document.getElementById('game').innerHTML += "<span style='color:lightgrey'>" + text +"</span>";
+        break;
       default:
         document.getElementById('game').innerHTML += text;
         break;
