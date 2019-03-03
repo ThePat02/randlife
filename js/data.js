@@ -18,6 +18,7 @@ var m_fitness = 50;
 var m_popularity = 50;
 
 var m_school = 0 //0 public -- 1 private -- 2 high class private
+var m_schoolyear = 0;
 
 //Random stats
 var m_maxage = 0;

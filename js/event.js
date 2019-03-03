@@ -25,6 +25,7 @@ function checkSpecialEvent() {
 }
 
 
+//School
 
 function chooseSchool(school_arg) {
   menuToggle(false, "menu_school");
@@ -59,7 +60,7 @@ function chooseSchool(school_arg) {
   lineBreak();
 
   switch (true) {
-    case (m_appearance < 20):
+    case (m_appearance < 25):
       write("You gained less popularity, because of your appearance.");
       m_popularity = m_popularity - 10;
       break;
@@ -93,6 +94,31 @@ function chooseSchool(school_arg) {
   menuToggle(true, "button_nextyear");
 }
 
+function calcGrades() {
+  var grade = m_intellect + (m_fitness / 3) + generateRandom(1, 30);
+  var result = "";
+
+  switch (true) {
+    case (grade < 50):
+      result = "Bad";
+      break;
+    case (grade > 50):
+      result = "Average";
+      break;
+    case (grade > 80):
+      result = "Good";
+      break;
+    case (grade > 90):
+      result = "Very good";
+      break;
+  }
+
+  return result;
+}
+
+
+
+//Misc
 
 function debugEvent(folder, id) {
   $.ajax({

@@ -16,8 +16,20 @@ function nextYear()
     triggerEvent();
   }
 
+  updateSchoolInfo();
+
   updateScroll();
   updateStatGraph();
 
   console.log("Finished year");
+}
+
+function updateSchoolInfo()
+{
+  if (m_age > 5) m_schoolyear = m_school + 1;
+  if (m_schoolyear < 13) {
+    changeContent("info_schoolyear", "Year " + m_schoolyear);
+    changeContent("info_grades", calcGrades());
+    changeContent("info_schooltype", writeSchoolType());
+  }
 }

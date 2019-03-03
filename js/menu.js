@@ -11,6 +11,11 @@ function menuToggle(action, id) {
   }
 }
 
+function changeContent(id, text)
+{
+  document.getElementById(id).innerHTML = text;
+}
+
 function showStartMenu(mode) {
 
   menuToggle(true, "menu_start");

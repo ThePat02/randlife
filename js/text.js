@@ -1,34 +1,30 @@
 //All text commands
 
-function write(text, style)
-{
-    switch (style) {
-      case "bold":
-        document.getElementById('game').innerHTML += "<strong>" + text +"</strong>";
-        break;
-      case "hint":
-        document.getElementById('game').innerHTML += "<span style='color:lightgrey'>" + text +"</span>";
-        break;
-      default:
-        document.getElementById('game').innerHTML += text;
-        break;
+function write(text, style) {
+  switch (style) {
+    case "bold":
+      document.getElementById('game').innerHTML += "<strong>" + text + "</strong>";
+      break;
+    case "hint":
+      document.getElementById('game').innerHTML += "<span style='color:lightgrey'>" + text + "</span>";
+      break;
+    default:
+      document.getElementById('game').innerHTML += text;
+      break;
 
-    }
+  }
 }
 
-function lineBreak()
-{
+function lineBreak() {
   document.getElementById('game').innerHTML += "<br>";
 }
 
-function dialog(text, btn1, btn1_action, btn2, btn2_action)
-{
+function dialog(text, btn1, btn1_action, btn2, btn2_action) {
   write(text);
   document.getElementById('game').innerHTML += "<a onclick='" + btn1_action + "'>" + btn1 + "</a> <a onclick='" + btn2_action + "'>" + btn2 + "</a>";
 }
 
-function writeParentalWealth()
-{
+function writeParentalWealth() {
   switch (m_parentalwealth) {
     case 0:
       return "poor";
@@ -43,5 +39,19 @@ function writeParentalWealth()
       return "very rich";
       break;
 
+  }
+}
+
+function writeSchoolType() {
+  switch (m_school) {
+    case 0:
+      return school.name[0];
+      break;
+    case 1:
+      return school.name[1];
+      break;
+    case 2:
+      return school.name[2];
+      break;
   }
 }
