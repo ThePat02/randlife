@@ -33,6 +33,6 @@ function showChooseSchoolMenu()
 {
   write("Choose your school: ");
   jsonGetSchools()
-  write("<span id='menu_school'><a chooseSchool(0)>" + school.name[0] + "</a> | " + "<a chooseSchool(1)>" + school.name[1] + "</a> | " + "<a chooseSchool(2)" + school.name[2] + "</a></span>");
+  write("<span id='menu_school'><a onclick='chooseSchool(0)'>" + school.name[0] + "</a> | " + "<a onclick='chooseSchool(1)'>" + school.name[1] + "</a> | " + "<a onclick='chooseSchool(2)'" + school.name[2] + "</a></span>");
   lineBreak();
 }
