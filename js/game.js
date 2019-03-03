@@ -17,6 +17,7 @@ function nextYear()
   }
 
   updateSchoolInfo();
+  updateClubStats();
 
   capStats();
 

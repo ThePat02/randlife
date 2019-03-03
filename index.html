@@ -46,8 +46,8 @@
           <a onclick="initNewGame('random')">Random</a> or <a onclick="initNewGame('custom')">Custom</a><br>
         </span>
         <span id="menu_start">
-          Name: <input type="text" name="" value=""> Surname: <input type="text" name="" value="">
-          Gender: <select class="" name="gender">
+          Name: <input type="text" id="box_name"> Surname: <input type="text" id="box_surname">
+          Gender: <select class="" name="gender" id="box_gender">
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select><br>
@@ -85,6 +85,7 @@
                     m_intellect,
                     m_fitness,
                     m_popularity,
+                    m_happiness,
                   ],
                   backgroundColor: [
                     color(chartColors.red).alpha(1).rgbString(),
@@ -92,6 +93,7 @@
                     color(chartColors.yellow).alpha(1).rgbString(),
                     color(chartColors.green).alpha(1).rgbString(),
                     color(chartColors.blue).alpha(1).rgbString(),
+                    color(chartColors.purple).alpha(1).rgbString(),
                   ],
                   label: '' // for legend
                 }],
@@ -100,7 +102,8 @@
                   'Appearance',
                   'Intellect',
                   'Fitness',
-                  'Popularity'
+                  'Popularity',
+                  'Happiness'
                 ]
               },
               options: {
@@ -137,8 +140,8 @@
             <p>
               <span id="info_schoolyear">Schoolyear</span><br>
               Grades: <span id="info_grades">N/A</span><br>
-              Clubs: <a onclick="">None</a> | <a onclick="">Sport</a> | <a onclick="">Literature</a> | <a onclick="">Music</a><br>
-              Activities: <a onclick="">None</a> | <a onclick="">Learning</a> | <a onclick="">Workout</a> | <a onclick="">Social interaction</a>
+              Clubs: <a onclick="joinClub('none')">None</a> | <a onclick="joinClub('sport')">Sport</a> | <a onclick="joinClub('literatrue')">Literature</a> | <a onclick="joinClub('music')">Music</a><br>
+              Activities: <a onclick="joinAct('none')">None</a> | <a onclick="joinAct('learning')">Learning</a> | <a onclick="joinAct('workout')">Workout</a> | <a onclick="joinAct('social')">Social interaction</a>
             </p>
           </div>
         </div>

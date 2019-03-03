@@ -16,9 +16,13 @@ var m_appearance = 50;
 var m_intellect = 50;
 var m_fitness = 50;
 var m_popularity = 50;
+var m_happiness = 50;
 
 var m_school = 0 //0 public -- 1 private -- 2 high class private
 var m_schoolyear = 0;
+
+var m_club = "";
+var m_act = "";
 
 //Random stats
 var m_maxage = 0;
@@ -36,11 +40,13 @@ function capStats()
   if (m_intellect > 100) m_intellect = 100;
   if (m_fitness > 100) m_fitness = 100;
   if (m_popularity > 100) m_popularity = 100;
+  if (m_happiness > 100) m_happiness = 100;
 }
 
 function randomizeStats(a)
 {
   m_health = 100;
+  m_happiness = 50;
   m_popularity = 0;
   m_appearance = generateRandom(20, 100);
   m_intellect = generateRandom(20, 100);

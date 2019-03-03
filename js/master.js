@@ -17,6 +17,11 @@ function initNewGame(mode)
 
 function startGame()
 {
+  m_name = document.getElementById("box_name").value;
+  m_surname = document.getElementById("box_surname").value;
+  m_gender = m_name = document.getElementById("box_gender").value;
+
+
   menuToggle(false, "menu_start");
   write("You are born as " + m_name + " " + m_surname + " in " + m_year + ".", "bold");
   lineBreak();
@@ -39,6 +44,7 @@ function updateStatGraph()
   myPolarArea.data.datasets[0].data[2] = m_intellect;
   myPolarArea.data.datasets[0].data[3] = m_fitness;
   myPolarArea.data.datasets[0].data[4] = m_popularity;
+  myPolarArea.data.datasets[0].data[5] = m_happiness;
 
   myPolarArea.update();
 }
