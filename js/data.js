@@ -37,7 +37,14 @@ function randomizeStats(a)
   m_fitness = generateRandom(40, 100);
 
   if (a == true) {
-    m_parentalwealth = generateRandom(0, 3);
+    m_parentalwealth = generateRandom(0, 100);
+
+    if (m_parentalwealth > 90) m_parentalwealth = 3;
+    else if (m_parentalwealth > 70) m_parentalwealth = 2;
+    else if (m_parentalwealth > 40) m_parentalwealth = 1;
+    else m_parentalwealth = 0;
+
+    }
   }
 
   updateStatGraph();
