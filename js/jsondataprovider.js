@@ -8,5 +8,5 @@ function jsonGetSchools()
            contentType: "application/json; charset=utf-8",
            success: function (msg) {
                school = JSON.parse(msg);
-           }
+           }});
 }
