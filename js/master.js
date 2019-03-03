@@ -19,7 +19,7 @@ function startGame()
 {
   m_name = document.getElementById("box_name").value;
   m_surname = document.getElementById("box_surname").value;
-  m_gender = m_name = document.getElementById("box_gender").value;
+  m_gender = document.getElementById("box_gender").value;
 
 
   menuToggle(false, "menu_start");
@@ -35,16 +35,4 @@ function startGame()
 function updateScroll(){
     var element = document.getElementById("gamebox");
     element.scrollTop = element.scrollHeight;
-}
-
-function updateStatGraph()
-{
-  myPolarArea.data.datasets[0].data[0] = m_health;
-  myPolarArea.data.datasets[0].data[1] = m_appearance;
-  myPolarArea.data.datasets[0].data[2] = m_intellect;
-  myPolarArea.data.datasets[0].data[3] = m_fitness;
-  myPolarArea.data.datasets[0].data[4] = m_popularity;
-  myPolarArea.data.datasets[0].data[5] = m_happiness;
-
-  myPolarArea.update();
 }

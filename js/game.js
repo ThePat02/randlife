@@ -17,7 +17,7 @@ function nextYear()
   }
 
   updateSchoolInfo();
-  updateClubStats();
+
 
   capStats();
 
@@ -33,6 +33,7 @@ function updateSchoolInfo()
   {
   m_schoolyear = m_schoolyear + 1;
   if (m_schoolyear < 13) {
+    updateClubStats();
     changeContent("info_schoolyear", "Year " + m_schoolyear);
     changeContent("info_grades", calcGrades());
     changeContent("info_schooltype", writeSchoolType());

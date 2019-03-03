@@ -86,6 +86,7 @@
                     m_fitness,
                     m_popularity,
                     m_happiness,
+                    m_trustworthyness,
                   ],
                   backgroundColor: [
                     color(chartColors.red).alpha(1).rgbString(),
@@ -94,6 +95,7 @@
                     color(chartColors.green).alpha(1).rgbString(),
                     color(chartColors.blue).alpha(1).rgbString(),
                     color(chartColors.purple).alpha(1).rgbString(),
+                    color(chartColors.grey).alpha(1).rgbString(),
                   ],
                   label: '' // for legend
                 }],
@@ -103,7 +105,8 @@
                   'Intellect',
                   'Fitness',
                   'Popularity',
-                  'Happiness'
+                  'Happiness',
+                  'Trustworthyness'
                 ]
               },
               options: {

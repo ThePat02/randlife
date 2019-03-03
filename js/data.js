@@ -17,6 +17,7 @@ var m_intellect = 50;
 var m_fitness = 50;
 var m_popularity = 50;
 var m_happiness = 50;
+var m_trustworthyness = 50;
 
 var m_school = 0 //0 public -- 1 private -- 2 high class private
 var m_schoolyear = 0;
@@ -33,6 +34,19 @@ var school = [];
 
 //Functions
 
+function updateStatGraph()
+{
+  myPolarArea.data.datasets[0].data[0] = m_health;
+  myPolarArea.data.datasets[0].data[1] = m_appearance;
+  myPolarArea.data.datasets[0].data[2] = m_intellect;
+  myPolarArea.data.datasets[0].data[3] = m_fitness;
+  myPolarArea.data.datasets[0].data[4] = m_popularity;
+  myPolarArea.data.datasets[0].data[5] = m_happiness;
+  myPolarArea.data.datasets[0].data[6] = m_trustworthyness;
+
+  myPolarArea.update();
+}
+
 function capStats()
 {
   if (m_health > 100) m_health = 100;
@@ -41,6 +55,7 @@ function capStats()
   if (m_fitness > 100) m_fitness = 100;
   if (m_popularity > 100) m_popularity = 100;
   if (m_happiness > 100) m_happiness = 100;
+  if (m_trustworthyness > 100) m_trustworthyness = 100;
 }
 
 function randomizeStats(a)
@@ -48,6 +63,7 @@ function randomizeStats(a)
   m_health = 100;
   m_happiness = 50;
   m_popularity = 0;
+  m_trustworthyness = 0;
   m_appearance = generateRandom(20, 100);
   m_intellect = generateRandom(20, 100);
   m_fitness = generateRandom(40, 100);
@@ -57,7 +73,7 @@ function randomizeStats(a)
 
     if (m_parentalwealth > 90) m_parentalwealth = 3;
     else if (m_parentalwealth > 70) m_parentalwealth = 2;
-    else if (m_parentalwealth > 40) m_parentalwealth = 1;
+    else if (m_parentalwealth > 30) m_parentalwealth = 1;
     else m_parentalwealth = 0;
 
     }

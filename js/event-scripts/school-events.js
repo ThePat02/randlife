@@ -93,9 +93,10 @@ function calcGrades() {
 
 
 function studentCouncil() {
-  if (m_intellect + m_popularity > 99) {
+  if (m_intellect + m_popularity > 109) {
     write("You are elected to join the student council.");
     m_popularity = m_popularity + 10;
+    m_trustworthyness = m_trustworthyness + 20;
   } else {
     write("You are not smart or popular enough to join the student council.");
   }
