@@ -45,7 +45,5 @@ function randomizeStats(a)
     else m_parentalwealth = 0;
 
     }
+    updateStatGraph();
   }
-
-  updateStatGraph();
-}
