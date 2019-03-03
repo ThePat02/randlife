@@ -25,6 +25,8 @@ function checkSpecialEvent() {
 
 function chooseSchool(school) {
   menuToggle(false, "menu_school");
+  lineBreak();
+  log("yes");
 
   if (school == 2) {
     if (school.req[2] == m_parentalwealth) {
