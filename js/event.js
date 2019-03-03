@@ -22,6 +22,10 @@ function checkSpecialEvent() {
     lineBreak();
     showChooseSchoolMenu();
   }
+  else if (m_schoolyear == 9) {
+    studentCouncil();
+    lineBreak();
+  }
 }
 
 
