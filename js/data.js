@@ -24,7 +24,7 @@ var m_maxage = 0;
 m_maxage = generateRandom(70, 130);
 
 //JSON Parsed objs
-var school;
+var school = [];
 
 //Functions
 
