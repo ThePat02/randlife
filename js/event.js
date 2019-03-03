@@ -23,11 +23,13 @@ function checkSpecialEvent() {
   }
 }
 
+  var req2 = school.req[2];
+
 function chooseSchool(school) {
   menuToggle(false, "menu_school");
   lineBreak();
 
-  var req2 = school.req[2];
+
 
   if (school == 2) {
     if (req2 == m_parentalwealth) {
