@@ -2,6 +2,7 @@
 
 function nextYear()
 {
+  menuToggle(false, "button_nextyear");
   m_year = m_year + 1;
   m_age = m_age + 1;
 
@@ -16,4 +17,5 @@ function nextYear()
   }
 
   updateScroll();
+  menuToggle(true, "button_nextyear");
 }
