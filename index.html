@@ -16,6 +16,7 @@
   <script src="https://www.chartjs.org/samples/latest/utils.js" charset="utf-8"></script>
 
   <!-- Scripts -->
+  <script src="js/snippets.js" charset="utf-8"></script>
   <script src="js/master.js" charset="utf-8"></script>
   <script src="js/menu.js" charset="utf-8"></script>
   <script src="js/text.js" charset="utf-8"></script>
@@ -23,6 +24,7 @@
   <script src="js/game.js" charset="utf-8"></script>
   <script src="js/event.js" charset="utf-8"></script>
   <script src="js/jsondataprovider.js" charset="utf-8"></script>
+
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/master.css">
@@ -43,7 +45,11 @@
           <a onclick="initNewGame('random')">Random</a> or <a onclick="initNewGame('custom')">Custom</a><br>
         </span>
         <span id="menu_start">
-          Name: <input type="text" name="" value=""> Surname: <input type="text" name="" value=""><br>
+          Name: <input type="text" name="" value=""> Surname: <input type="text" name="" value="">
+          Gender: <select class="" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select><br>
 
           <span id="menu_start_random">Random</span>
           <span id="menu_start_custom">Custom</span>
@@ -80,11 +86,11 @@
                     m_popularity,
                   ],
                   backgroundColor: [
-                    color(chartColors.red).alpha(0.5).rgbString(),
-                    color(chartColors.orange).alpha(0.5).rgbString(),
-                    color(chartColors.yellow).alpha(0.5).rgbString(),
-                    color(chartColors.green).alpha(0.5).rgbString(),
-                    color(chartColors.blue).alpha(0.5).rgbString(),
+                    color(chartColors.red).alpha(1).rgbString(),
+                    color(chartColors.orange).alpha(1).rgbString(),
+                    color(chartColors.yellow).alpha(1).rgbString(),
+                    color(chartColors.green).alpha(1).rgbString(),
+                    color(chartColors.blue).alpha(1).rgbString(),
                   ],
                   label: '' // for legend
                 }],
@@ -103,7 +109,7 @@
                 },
                 title: {
                   display: true,
-                  text: m_name + " " + m_surname
+                  text: "Stats"
                 },
                 scale: {
                   ticks: {
@@ -125,6 +131,17 @@
           </script>
         </div>
         <div class="col-sm-6">
+          <div class="box">
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+
+        </div>
+        <div class="col-sm-6">
+
         </div>
       </div>
     </div>

@@ -19,6 +19,7 @@ function showStartMenu(mode) {
 
   switch (mode) {
     case "random":
+      randomizeStats(true);
       menuToggle(false, "menu_start_custom");
       break;
 
@@ -32,6 +33,6 @@ function showChooseSchoolMenu()
 {
   write("Choose your school: ");
   jsonGetSchools()
-  write("<a>" + school.name[0] + "</a> " + "<a>" + school.name[1] + "</a> " + "<a>" + school.name[2] + "</a>");
+  write("<span id='menu_school'><a chooseSchool(0)>" + school.name[0] + "</a> | " + "<a chooseSchool(1)>" + school.name[1] + "</a> | " + "<a chooseSchool(2)" + school.name[2] + "</a></span>");
   lineBreak();
 }
