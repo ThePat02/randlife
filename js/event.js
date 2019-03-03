@@ -63,17 +63,16 @@ function chooseSchool(school_arg) {
       write("You gained less popularity, because of your appearance.");
       m_popularity = m_popularity - 10;
       break;
-    case (m_appearance > 40):
-      write("Since you are average looking, people don't dislike you.");
-      m_popularity = m_popularity + 5;
-      break;
+    case (m_appearance > 80):
+      write("Since you are the best looking in class, you are rather popular.");
+      m_popularity = m_popularity + 25;
     case (m_appearance > 70):
       write("You are rather good looking and people want to talk with you.");
       m_popularity = m_popularity + 10;
       break;
-    case (m_appearance > 80):
-      write("Since you are the best looking in class, you are rather popular.");
-      m_popularity = m_popularity + 25;
+    case (m_appearance > 40):
+      write("Since you are average looking, people don't dislike you.");
+      m_popularity = m_popularity + 5;
       break;
     default:
       break;
