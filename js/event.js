@@ -96,6 +96,9 @@ function chooseSchool(school_arg) {
 
 function calcGrades() {
   var grade = m_intellect + (m_fitness / 3) + generateRandom(1, 30);
+  m_intellect = m_intellect + grade/5;
+  m_intellect = m_intellect + grade/6;
+
   var result = "";
 
   switch (true) {
