@@ -17,6 +17,7 @@ function checkSpecialEvent() {
 
   } //Placeholder
   else if (m_age == 6) {
+    menuToggle(false, "button_nextyear");
     write("You are now old enough to start going to school.");
     lineBreak();
     showChooseSchoolMenu();
@@ -33,23 +34,57 @@ function chooseSchool(school_arg) {
     if (school.req[2] == m_parentalwealth) {
       m_school = 2;
       write("You decide to go to a " + school.name[2] + ".");
+      m_popularity = m_popularity + 50;
     } else {
       m_school = 0;
       write("You can't afford this school so you go to a " + school.name[0] + ".");
+      m_popularity = m_popularity + 20;
     }
   } else if (school_arg == 1) {
     if (school.req[1] == m_parentalwealth) {
       m_school = 1;
       write("You decide to go to a " + school.name[1] + ".");
+      m_popularity = m_popularity + 30;
     } else {
       m_school = 0;
       write("You can't afford this school so you go to a " + school.name[0] + ".");
+      m_popularity = m_popularity + 20;
     }
-  }
-  else {
+  } else {
     m_school = 0;
     write("You decide to go to a " + school.name[0] + ".");
+    m_popularity = m_popularity + 20;
   }
+
+  lineBreak();
+
+  switch (true) {
+    case (m_appearance < 20):
+      write("You gained less popularity, because of your appearance.");
+      m_popularity = m_popularity - 10;
+      break;
+    case (m_appearance > 40):
+      write("Since you are average looking, people don't dislike you.");
+      m_popularity = m_popularity + 5;
+      break;
+    case (m_appearance > 70):
+      write("You are rather good looking and people want to talk with you.");
+      m_popularity = m_popularity + 10;
+      break;
+    case (m_appearance > 80):
+      write("Since you are the best looking in class, you are rather popular.");
+      m_popularity = m_popularity + 25;
+      break;
+    default:
+      break;
+  }
+
+  if (m_parentalwealth == 2) {
+    write("Your parents wealth benefits your popularity!");
+    m_popularity = m_popularity + 5;
+  }
+
+  menuToggle(true, "button_nextyear");
 }
 
 
