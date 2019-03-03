@@ -29,6 +29,15 @@ var school = [];
 
 //Functions
 
+function capStats()
+{
+  if (m_health > 100) m_health = 100;
+  if (m_appearance > 100) m_appearance = 100;
+  if (m_intellect > 100) m_intellect = 100;
+  if (m_fitness > 100) m_fitness = 100;
+  if (m_popularity > 100) m_popularity = 100;
+}
+
 function randomizeStats(a)
 {
   m_health = 100;

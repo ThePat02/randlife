@@ -18,6 +18,8 @@ function nextYear()
 
   updateSchoolInfo();
 
+  capStats();
+
   updateScroll();
   updateStatGraph();
 
