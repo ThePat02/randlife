@@ -114,7 +114,7 @@ function joinClub(club) {
       break;
     case "literature":
       write("You are going to the literatrue club.");
-      m_club = "literatrue";
+      m_club = "literature";
       break;
     case "music":
       write("You are going to the music club.");
