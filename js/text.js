@@ -6,7 +6,7 @@ function write(text, style) {
       document.getElementById('game').innerHTML += "<strong>" + text + "</strong>";
       break;
     case "hint":
-      document.getElementById('game').innerHTML += "<span style='color:lightgrey'>" + text + "</span>";
+      document.getElementById('game').innerHTML += "<span style='color:orange'>" + text + "</span>";
       break;
     default:
       document.getElementById('game').innerHTML += text;
