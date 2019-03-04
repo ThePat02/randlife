@@ -188,7 +188,7 @@ function prom() {
         write(" Overall everything went good.");
         m_trustworthyness = m_trustworthyness + 5;
         break;
-      case (result > 15)
+      case (result > 15):
       write(" Everything was flawless.");
       m_trustworthyness = m_trustworthyness + 10;
       m_popularity = m_popularity + 10;
