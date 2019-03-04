@@ -59,6 +59,7 @@ function chooseSchool(school_arg) {
   lineBreak();
   write("You can join clubs etc. by selecting them on the school dashboard.", "hint");
   menuToggle(true, "dashboard_school");
+  menuToggle(true, "dashboard_school2");
 
   updateStatGraph();
   lineBreak();
@@ -66,7 +67,7 @@ function chooseSchool(school_arg) {
 }
 
 function calcGrades() {
-  var grade = m_intellect + (m_fitness / 3) + generateRandom(1, 30);
+  var grade = m_intellect + (m_fitness / 5) + generateRandom(1, 30);
 
   var result = "";
 
@@ -97,6 +98,7 @@ function studentCouncil() {
     write("You are elected to join the student council.");
     m_popularity = m_popularity + 10;
     m_trustworthyness = m_trustworthyness + 20;
+    m_council = true;
   } else {
     write("You are not smart or popular enough to join the student council.");
   }
@@ -122,6 +124,8 @@ function joinClub(club) {
       break;
   }
   lineBreak();
+
+  updateInfoDashboard();
 }
 
 function updateClubStats() {
@@ -138,6 +142,8 @@ function updateClubStats() {
       m_popularity = m_popularity + 2;
       break;
   }
+
+  updateInfoDashboard();
 }
 
 function joinAct(act) {
@@ -165,4 +171,46 @@ function joinAct(act) {
       break;
   }
   lineBreak();
+  updateInfoDashboard();
+}
+
+function prom() {
+  if (m_council == true) {
+    write("As member of the student council you help with organizing the graduation prom.");
+    var result = generateRandom(1, 20);
+
+    switch (true) {
+      case (result < 5):
+        write(" It went horribly wrong.");
+        m_trustworthyness = m_trustworthyness - 10;
+        break;
+      case (result < 15):
+        write(" Overall everything went good.");
+        m_trustworthyness = m_trustworthyness + 5;
+        break;
+      case (result > 15)
+      write(" Everything was flawless.");
+      m_trustworthyness = m_trustworthyness + 10;
+      m_popularity = m_popularity + 10;
+      break;
+    }
+
+  }
+  else {
+    write("You addented the graduation prom.");
+  }
+
+  lineBreak();
+}
+
+function schoolEnd() {
+  menuToggle(false, "dashboard_school");
+  menuToggle(false, "dashboard_school2");
+
+  var finalgrades = calcGrades();
+
+  write("You finish school with " + finalgrades + " grades.");
+  changeContent("info_finalgrades", finalgrades);
+  lineBreak();
+  prom();
 }

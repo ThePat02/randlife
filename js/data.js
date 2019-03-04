@@ -22,8 +22,9 @@ var m_trustworthyness = 50;
 var m_school = 0 //0 public -- 1 private -- 2 high class private
 var m_schoolyear = 0;
 
-var m_club = "";
-var m_act = "";
+var m_club = "none";
+var m_act = "none";
+var m_council = false;
 
 //Random stats
 var m_maxage = 0;

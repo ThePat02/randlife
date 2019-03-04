@@ -17,6 +17,7 @@ function nextYear()
   }
 
   updateSchoolInfo();
+  updateInfoDashboard();
 
 
   capStats();
@@ -37,6 +38,9 @@ function updateSchoolInfo()
     changeContent("info_schoolyear", "Year " + m_schoolyear);
     changeContent("info_grades", calcGrades());
     changeContent("info_schooltype", writeSchoolType());
+  }
+  else {
+    schoolEnd();
   }
 }
 }

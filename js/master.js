@@ -5,6 +5,7 @@ function init()
   menuToggle(false, "menu_start");
   menuToggle(false, "button_nextyear");
   menuToggle(false, "dashboard_school");
+  menuToggle(false, "dashboard_school2");
 
   //Load resources
   jsonGetSchools();
@@ -35,4 +36,13 @@ function startGame()
 function updateScroll(){
     var element = document.getElementById("gamebox");
     element.scrollTop = element.scrollHeight;
+}
+
+function updateInfoDashboard()
+{
+  changeContent("info_name", m_name + " " + m_surname);
+  changeContent("info_age", m_age);
+
+  changeContent("info_club", m_club);
+  changeContent("info_act", m_act);
 }
