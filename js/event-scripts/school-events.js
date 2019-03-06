@@ -143,7 +143,27 @@ function updateClubStats() {
       break;
   }
 
-  updateInfoDashboard();
+  updateStatGraph();
+}
+
+function updateActStats() {
+  switch (m_act) {
+    case "none":
+      break;
+    case "learning":
+    m_intellect = m_intellect + 2;
+    m_fitness = m_fitness - 1;
+      break;
+    case "workout":
+    m_fitness = m_fitness + 2;
+    m_appearance = m_appearance + 1;
+      break;
+    case "social":
+      m_popularity = m_popularity + 1;
+      break;
+  }
+
+  updateStatGraph();
 }
 
 function joinAct(act) {
@@ -154,15 +174,13 @@ function joinAct(act) {
       break;
     case "learning":
       write("You start learning after school.");
-      m_intellect = m_intellect + 2;
-      m_fitness = m_fitness - 1;
+
       m_act = "learning";
       break;
     case "workout":
       write("You start working out after school.");
       m_act = "workout";
-      m_fitness = m_fitness + 2;
-      m_appearance = m_appearance + 1;
+
       break;
     case "social":
       write("You start meeting your friends after school.");
